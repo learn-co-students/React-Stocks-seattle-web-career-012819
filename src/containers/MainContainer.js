@@ -9,7 +9,6 @@ class MainContainer extends Component {
     this.state = {
       stocks: [],
       portfolioStocks: [],
-      sort: '',
       filteredStocks: []
     }
   }
@@ -95,7 +94,7 @@ class MainContainer extends Component {
           <div className="row">
             <div className="col-8">
 
-              <StockContainer stocks={this.state.stocks} handleBuyStockClick={this.handleBuyStockClick} sort={this.state.sort} filteredStocks={this.state.filteredStocks}/>
+              <StockContainer stocks={this.state.stocks} handleBuyStockClick={this.handleBuyStockClick} filteredStocks={this.state.filteredStocks}/>
 
             </div>
             <div className="col-4">
