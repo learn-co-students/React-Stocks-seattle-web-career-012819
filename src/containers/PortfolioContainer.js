@@ -7,9 +7,9 @@ class PortfolioContainer extends Component {
     return (
       <div>
         <h2>My Portfolio</h2>
-          {
-            //render your portfolio stocks here
-          }
+          {this.props.ownedStocks.map((stock, index)=> {
+            return <Stock stock={stock} key={index} sellStock={this.props.sellStock} public={false}/>
+          })}
       </div>
     );
   }
