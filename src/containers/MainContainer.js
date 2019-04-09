@@ -39,9 +39,6 @@ class MainContainer extends Component {
   }
 
   handleSellStockClick = (id) => {
-    const chosenStock = this.state.portfolioStocks.find(stock => {
-      return stock.id === id
-    })
     const allExceptChosenStock = this.state.portfolioStocks.filter(stock => {
       return stock.id !== id
     })
