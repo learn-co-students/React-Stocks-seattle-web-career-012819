@@ -46,7 +46,6 @@ class MainContainer extends Component {
     const allExceptChosenStock = this.state.portfolioStocks.filter(stock => {
       return stock.id !== id
     })
-    chosenStock.isPortfolioStock = false
     this.setState({portfolioStocks: allExceptChosenStock})
   }
 
