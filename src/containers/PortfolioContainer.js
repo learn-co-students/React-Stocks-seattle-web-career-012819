@@ -1,14 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Stock from '../components/Stock'
 
 class PortfolioContainer extends Component {
+  generateStockProps = (stockObj) => {
+    return {
+      handlers: {
+        handleClick: this.props.data.handlers.handleClick
+      },
+      name: stockObj.name,
+      price: stockObj.price
+    }
+  }
 
-  render() {
+  render () {
     return (
       <div>
         <h2>My Portfolio</h2>
           {
-            //render your portfolio stocks here
+            this.props.data.stocks.map(stock => {
+              return (stock.active) ?
+              <Stock
+                data={this.generateStockProps(stock)}
+                key={stock.id}
+              /> : null
+            })
           }
       </div>
     );
@@ -16,4 +31,4 @@ class PortfolioContainer extends Component {
 
 }
 
-export default PortfolioContainer;
+export default PortfolioContainer
