@@ -7,9 +7,13 @@ class StockContainer extends Component {
     return (
       <div>
         <h2>Stocks</h2>
-        {
-          //render the list of stocks here
-        }
+        <Stock 
+        stocks={this.props.stocks} 
+        stockClicked={this.props.stockClicked} 
+        filtered={this.props.filtered} 
+        isFiltered={this.props.isFiltered} 
+        sorted={this.props.sorted} 
+        isSorted={this.props.isSorted}/>
       </div>
     );
   }
