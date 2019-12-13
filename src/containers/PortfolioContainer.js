@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stock from '../components/Stock'
+import Portfolio from '../components/Portfolio'
 
 class PortfolioContainer extends Component {
 
@@ -7,9 +7,9 @@ class PortfolioContainer extends Component {
     return (
       <div>
         <h2>My Portfolio</h2>
-          {
-            //render your portfolio stocks here
-          }
+        <Portfolio 
+        stock={this.props.stock} 
+        remove={this.props.remove}/>
       </div>
     );
   }

@@ -7,6 +7,8 @@ class Header extends Component {
       <header>
         <h1 className="text-center">Flatiron Stock Exchange</h1>
       </header>
+      
+
     );
   }
 
